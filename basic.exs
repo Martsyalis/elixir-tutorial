@@ -1,4 +1,4 @@
-# function that takes a value and determines if its even or odd.
+# // functions for some basic Katas faund online
 
 defmodule Functions do
 
@@ -13,6 +13,7 @@ defmodule Functions do
       "odd"
     end 
   end
+  
 end
 
 # IO.puts Functions.evenOrOdd(10)
@@ -25,6 +26,18 @@ defmodule Recursion do
       print_n_times(string, n - 1)
     end
   end
+  def add_to_string(string, n) do
+    if n > 0 do
+      string <> add_to_string(string, n - 1)
+    else
+     "/"
+    end
+  end
 end
 
-Recursion.print_n_times("Latte!", 10)
+Recursion.print_n_times("Latte!", 1)
+IO.puts Recursion.add_to_string("S", 10)
+
+
+
+
