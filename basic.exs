@@ -6,7 +6,7 @@ defmodule Functions do
     "hello " <> name 
   end
 
-  def evenOrOdd(n) do
+  def even_or_odd(n) do
     if( rem(n, 2) === 0 ) do
       "even"
     else
@@ -19,12 +19,12 @@ end
 # IO.puts Functions.hello("Steve")
 
 defmodule Recursion do
-  def print_multiple_times(string, n) do
+  def print_n_times(string, n) do
     if n > 0 do
       IO.puts string
-      print_multiple_times(string, n - 1)
+      print_n_times(string, n - 1)
     end
   end
 end
 
-Recursion.print_multiple_times("Latte!", 10)
+Recursion.print_n_times("Latte!", 10)
